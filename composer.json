@@ -1,0 +1,20 @@
+{
+  "name": "bkubicki/module-configurable-product-attribute-handles",
+  "description": "Module adds to catalog frontend custom layout handles based on configurable product",
+  "require": {
+    "php": "~7.3.0||~7.3.0",
+    "magento/module-catalog": "103.0.*||103.0.*",
+    "magento/module-configurable-product": "100.3.*||100.4.*"
+  },
+  "type": "magento2-module",
+  "license": "MIT",
+  "version": "1.0.0",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "BKubicki\\ConfigurableProductAttributeHandles\\": ""
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin section -->
+    <type name="Magento\Catalog\Helper\Product\View">
+        <plugin name="BKubicki_ConfigurableProductAttributeHandles::addingSuperAttributesHandlesForConfigurableProducts"
+                type="BKubicki\ConfigurableProductAttributeHandles\Plugin\Catalog\Helper\Product\View"
+                sortOrder="10" />
+    </type>
+
+    <type name="Magento\Catalog\Block\Product\ListProduct">
+        <plugin name="BKubicki_ConfigurableProductAttributeHandles::allowSuperAttributesRendererPicking"
+                type="BKubicki\ConfigurableProductAttributeHandles\Plugin\Catalog\Block\Product\ListProduct"
+                sortOrder="10" />
+    </type>
+
+    <virtualType name="Magento\CatalogSearch\Block\SearchResult\ListProduct">
+        <plugin name="BKubicki_ConfigurableProductAttributeHandles::allowSuperAttributesRendererPicking"
+                type="BKubicki\ConfigurableProductAttributeHandles\Plugin\Catalog\Block\Product\ListProduct"
+                sortOrder="10" />
+    </virtualType>
+
+    <type name="Magento\Swatches\Block\Product\Renderer\Configurable">
+        <plugin name="BKubicki_ConfigurableProductAttributeHandles::switchTemplateBasingOnSuperAttribute"
+                type="BKubicki\ConfigurableProductAttributeHandles\Plugin\Swatches\Block\Product\Renderer\Configurable"
+                sortOrder="10" />
+    </type>
+    <!-- Plugin section -->
+</config>
